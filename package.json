@@ -1,10 +1,11 @@
 {
     "name": "delete-bin-obj",
-    "displayName": "Delete /bin and /obj Folders",
-    "description": "Deletes the /bin and /obj sub-folders from the selected folder.",
-    "version": "1.0.0",
+    "displayName": "Delete bin and obj Folders",
+    "description": "Deletes the bin and obj folders from the selected folder.",
+    "version": "1.0.1",
     "publisher": "vhugogarcia",
-    "repository": "https://github.com/vhugogarcia/bin-obj-cleaner",
+    "repository": "https://github.com/vhugogarcia/delete-bin-obj",
+    "icon": "icon.png",
     "engines": {
       "vscode": "^1.85.0"
     },

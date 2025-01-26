@@ -1,4 +1,4 @@
-# 🗑️ Delete Bin Obj
+# 🗑️ Delete /bin /obj
 
 A lightweight VS Code extension to effortlessly remove `/bin` and `/obj` subdirectories from your project folders.
 
