@@ -1,9 +1,10 @@
 {
     "name": "delete-bin-obj",
-    "displayName": "Delete Bin and Obj Folders",
+    "displayName": "Delete /bin and /obj Folders",
     "description": "Deletes the /bin and /obj sub-folders from the selected folder.",
-    "version": "0.0.1",
-    "publisher": "Victor Hugo Garcia",
+    "version": "1.0.0",
+    "publisher": "vhugogarcia",
+    "repository": "https://github.com/vhugogarcia/bin-obj-cleaner",
     "engines": {
       "vscode": "^1.85.0"
     },
@@ -14,13 +15,13 @@
       "commands": [
         {
           "command": "extension.deleteBinObj",
-          "title": "Delete Bin and Obj Folders"
+          "title": "Delete /bin and /obj Folders"
         }
       ],
       "menus": {
         "explorer/context": [
           {
-            "when": "activeEditor",
+            "when": "explorerResourceIsFolder",
             "command": "extension.deleteBinObj",
             "group": "navigation"
           }
