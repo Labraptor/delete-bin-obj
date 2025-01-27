@@ -24,7 +24,7 @@
           {
             "when": "explorerResourceIsFolder",
             "command": "extension.deleteBinObj",
-            "group": "navigation"
+            "group": "z_commands"
           }
         ]
       }
