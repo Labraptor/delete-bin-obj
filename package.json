@@ -2,7 +2,7 @@
     "name": "delete-bin-obj",
     "displayName": "Delete bin and obj Folders",
     "description": "Deletes the bin and obj folders from the selected folder.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "vhugogarcia",
     "repository": "https://github.com/vhugogarcia/delete-bin-obj",
     "icon": "icon.png",
