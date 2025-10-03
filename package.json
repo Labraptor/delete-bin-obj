@@ -1,47 +1,60 @@
 {
-    "name": "delete-bin-obj",
-    "displayName": "Delete bin and obj Folders",
-    "description": "Deletes the bin and obj folders from the selected folder.",
-    "version": "1.0.2",
-    "publisher": "vhugogarcia",
-    "repository": "https://github.com/vhugogarcia/delete-bin-obj",
-    "icon": "icon.png",
-    "engines": {
-      "vscode": "^1.85.0"
-    },
-    "categories": ["Other"],
-    "activationEvents": [],
-    "main": "./out/extension.js",
-    "contributes": {
-      "commands": [
+  "name": "delete-bin-obj",
+  "displayName": "Delete bin and obj Folders",
+  "description": "Deletes the bin and obj folders from the selected folder.",
+  "version": "1.0.2",
+  "publisher": "vhugogarcia",
+  "repository": "https://github.com/vhugogarcia/delete-bin-obj",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.deleteBinObj",
+        "title": "Delete /bin and /obj Folders"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
         {
+          "when": "explorerResourceIsFolder",
           "command": "extension.deleteBinObj",
-          "title": "Delete /bin and /obj Folders"
+          "group": "z_commands"
         }
       ],
-      "menus": {
-        "explorer/context": [
-          {
-            "when": "explorerResourceIsFolder",
-            "command": "extension.deleteBinObj",
-            "group": "z_commands"
-          }
-        ]
-      }
-    },
-    "scripts": {
-      "vscode:prepublish": "npm run compile",
-      "compile": "tsc -p ./",
-      "watch": "tsc -watch -p ./",
-      "pretest": "npm run compile && npm run lint",
-      "lint": "eslint src --ext ts"
-    },
-    "devDependencies": {
-      "@types/node": "^16.11.7",
-      "@types/vscode": "^1.85.0",
-      "eslint": "^9.19.0",
-      "typescript": "^5.7.3",
-      "@vscode/test-electron": "^2.4.1"
+      "view/item/context": [
+        {
+          "when": "view == SolutionExplorer && viewItem == project",
+          "command": "extension.deleteBinObj",
+          "group": "z_commands"
+        },
+        {
+          "when": "view == SolutionExplorer && viewItem == folder",
+          "command": "extension.deleteBinObj",
+          "group": "z_commands"
+        }
+      ]
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.85.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-electron": "^2.4.1"
   }
-  
+}
